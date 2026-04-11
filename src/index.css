@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+/* ─── Qurova Font Family ───────────────────────────────── */
+@font-face {
+  font-family: 'Qurova';
+  src: url('/font/QurovaDEMO-Light-BF67a5c6380ebd4.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/font/QurovaDEMO-Regular-BF67a5c637a5dc9.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/font/QurovaDEMO-Medium-BF67a5c6382651c.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/font/QurovaDEMO-SemiBold-BF67a5c637bcd0b.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qurova';
+  src: url('/font/QurovaDEMO-Bold-BF67a5c637eed62.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Design Tokens (Light Mode) ───────────────────────── */
+:root {
+  --bg: #ffffff;
+  --text: #212842;
+  --text-muted: #535c7a;
+  --navy: #212842;
+  --cream: #F0E7D5;
+  --border: rgba(33, 40, 66, 0.1);
+  --card-bg: rgba(33, 40, 66, 0.02);
+  --card-border: rgba(33, 40, 66, 0.08);
+}
+
+/* ─── Reset & Base ─────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Qurova Utility ───────────────────────────────────── */
+.font-qurova {
+  font-family: 'Qurova', Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(33, 40, 66, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 40, 66, 0.3);
+}
+
+/* ─── Card / Surface ───────────────────────────────────── */
+.card {
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px -4px rgba(33, 40, 66, 0.05);
+}
+
+/* ─── Buttons ──────────────────────────────────────────── */
+.btn-primary {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: 'Qurova', Georgia, serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 40, 66, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid rgba(33, 40, 66, 0.12);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--navy);
+  background: rgba(33, 40, 66, 0.03);
+}
+
+/* ─── Navbar strip ─────────────────────────────────────── */
+.navbar-strip {
+  background: var(--bg);
+  border-bottom: 1px solid rgba(33, 40, 66, 0.06);
+}
+
+/* ─── Fade In Animations ───────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up-1 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.05s forwards;
+}
+
+.fade-in-up-2 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.15s forwards;
+}
+
+.fade-in-up-3 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.3s forwards;
+}
+
+.fade-in-up-4 {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease 0.45s forwards;
+}
+
+/* ─── Floating effect ───────────────────────────────────── */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ─── Teleprompter Panel styling ───────────────────────────── */
+.tp-display-bg {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ─── Range Sliders (Navy on Cream) ─────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(33, 40, 66, 0.1);
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* ─── Color Pickers ────────────────────────────────────── */
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  padding: 1px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 40, 66, 0.15);
+  background: white;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 1.5px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+
+/* ─── Keyboard keys (Kbd) ───────────────────────────────── */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--navy);
+  border: 1px solid rgba(33, 40, 66, 0.1);
+  box-shadow: 0 1px 2px rgba(33, 40, 66, 0.05);
+  font-family: 'DM Sans', system-ui, monospace;
+  font-size: 0.8rem;
+  color: var(--text);
+  min-width: 52px;
+}
+
+/* ─── Reading Mask ─────────────────────────────────────── */
+.reading-mask {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 5;
+}
+
+/* ─── Flipped (Mirror) ──────────────────────────────────── */
+.flipped {
+  transform: scaleY(-1);
+}
+
+/* ─── Navbar (teleprompter page) ────────────────────────── */
+.navbar-blur {
+  background: #D1D5DB;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(33, 40, 66, 0.08);
+}
