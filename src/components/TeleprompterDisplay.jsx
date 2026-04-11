@@ -31,7 +31,7 @@ const TeleprompterDisplay = forwardRef(function TeleprompterDisplay(
           paddingBottom: '60vh',
           lineHeight: 1.8,
           letterSpacing: '0.01em',
-          fontFamily: 'Georgia, "Times New Roman", serif',
+          fontFamily: '',
           transition: 'font-size 0.2s ease, color 0.2s ease',
         }}
       >
