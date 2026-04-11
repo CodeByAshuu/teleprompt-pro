@@ -83,7 +83,7 @@ export default function HeroBottom() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SHORTCUTS.map(([key, desc]) => (
               <div key={key} className="flex items-center gap-5">
-                <span className="kbd" style={{ color: 'var(--cream)', fontSize: '0.85rem', fontWeight: 600 }}>{key}</span>
+                <span className="kbd" style={{ color: 'var(--cream)', fontSize: '1.25rem', fontWeight: 600 }}>{key}</span>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{desc}</span>
               </div>
             ))}
