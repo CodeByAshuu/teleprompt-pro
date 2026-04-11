@@ -29,7 +29,13 @@ export default function HomePage() {
         className="py-10 px-8 text-center text-sm"
         style={{ borderTop: '1px solid rgba(33, 40, 66, 0.06)', color: 'var(--text-muted)' }}
       >
-        TelePrompter Pro - Free, no login, no ads. Made with rizz by @SagarSahu
+        Qurova Pro - Free, no login, no ads. Made with rizz by {" "}
+        <a
+          href="https://sagarsahudev.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >@SagarSahu</a>
       </footer>
     </div>
   )
